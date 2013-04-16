@@ -1,0 +1,49 @@
+﻿#menuColumn{
+	width:140px;
+	float:left;
+	padding-left:10px;
+}
+
+#listMenu a{	/* Main menu items */
+	color:#000;
+	text-decoration:none;
+	font-weight:bold;
+
+}
+#listMenu ul li a{	/* Sub menu */
+	color: #F00;
+	font-weight:normal;
+}
+#listMenu ul li ul li a{	/* Sub Sub menu */
+	color: #000;
+	font-style:italic;
+	font-size:0.9em;
+	font-weight:normal;		
+}
+	
+#listMenu .activeMenuLink{	/* Styling of active menu item */
+	color:blue;
+}
+	
+	
+/*
+No bullets
+*/	
+#listMenu li{
+	list-style-type:none;	
+}
+	
+/*
+No margin and padding
+*/
+#listMenu, #listMenu ul{
+	margin:0px;
+	padding:0px;
+}
+
+/* Margin of sub menu items */
+#listMenu ul{
+	display:none;
+	margin-left:10px;
+}
+	

@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    
+    @* Styles.Render & Scripts.Render - is calling files included in the bundle declared in BundleConfig class in the App_Start folder *@
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/menu")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <header>
+        <nav>
+            <ul id="menu">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Brands", "Index", "Brand")</li>
+                <li>@Html.ActionLink("Beers", "Index", "Beer")</li>
+            </ul>
+        </nav>
+    </header>
+</head>
+<body>
+
+    <!-- left navigation menu - for looks and demo purposes only -->
+    <div id="menuColumn">
+	    <ul id="listMenu">
+		    <li><a href="#">Products</a>
+			    <ul>
+				    <li><a href="#">Menus</a></li>
+				    <li><a href="#">Calendar scripts</a></li>
+				    <li><a href="#">Window scripts</a></li>
+				    <li><a href="#">Form widgets</a></li>
+			    </ul>
+		    </li>
+		    <li><a href="#">Support</a>
+			    <ul>
+				    <li><a href="#">Phone</a></li>
+				    <li><a href="#">Email</a></li>
+				    <li><a href="#">QnA</a></li>
+			    </ul>		
+		    </li>
+		    <li><a href="#">History</a>
+			    <ul>
+				    <li><a href="#">1900 - 1940</a>
+					    <ul>
+						    <li><a href="#">Active link</a></li>
+						    <li><a href="#">Another link</a></li>
+					    </ul>
+				    </li>
+				    <li><a href="#">1941 - 1980 </a></li>
+				    <li><a href="#">1981 - Present time</a></li>
+			    </ul>
+		    </li>
+		    <li><a href="#">The team</a>
+			    <ul>
+				    <li><a href="#">Person A</a></li>
+				    <li><a href="#">Person B</a></li>
+				    <li><a href="#">Person C</a></li>
+				    <li><a href="#">Person D</a></li>
+				    <li><a href="#">Person E</a></li>
+
+			    </ul>		
+		    </li>
+		    <li><a href="#">Locations</a>
+			    <ul>
+				    <li><a href="#">Norway</a></li>
+				    <li><a href="#">United States</a></li>
+				    <li><a href="#">United Kingdom</a></li>
+				    <li><a href="#">Sweden</a></li>
+				    <li><a href="#">Denmark</a></li>
+				    <li><a href="#">Finland</a></li>
+			    </ul>			
+		    </li>
+	    </ul>
+    </div>
+
+
+    @* RenderBody is the placeholder that will render the views *@
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
